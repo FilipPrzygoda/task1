@@ -2,11 +2,11 @@
 
 ## Opis zadania
 
-Celem zadania jest zamodelowanie wybranego fragmentu bezpiecznej aplikacji bankowej zgodnie z podejściem Domain-Driven Design (DDD). Przyjęty wycinek domeny obejmuje uwierzytelnianie użytkownika, obsługę profilu klienta i rachunku bankowego oraz proces autoryzacji i realizacji przelewu wychodzącego. Całość podzielono na trzy konteksty ograniczone (*Bounded Contexts*): `Identity & Access`, `Account Management` oraz `Transfers`, komunikujące się wyłącznie za pośrednictwem identyfikatorów oraz zdarzeń domenowych. Dla wszystkich encji i obiektów wartości zdefiniowano inwarianty oraz ograniczenia formatów danych wymuszane już na etapie konstrukcji obiektów, co eliminuje ryzyko powstania niespójnego stanu w systemie.
+Zadanie opisuje fragmentu bezpiecznej aplikacji bankowej zgodnie z podejściem Domain-Driven Design (DDD). Całość podzielono na trzy konteksty ograniczone (*Bounded Contexts*): `Identity & Access`, `Account Management` oraz `Transfers`, komunikujące się wyłącznie za pośrednictwem identyfikatorów oraz zdarzeń domenowych. Dla wszystkich encji i obiektów wartości zdefiniowano inwarianty oraz ograniczenia formatów danych wymuszane już na etapie konstrukcji obiektów, co eliminuje ryzyko powstania niespójnego stanu w systemie.
 
 ## Model
 
-![Model DDD](./tbo1_model.jpg)
+![Model DDD](./DDD/tbo1_model.jpg)
 
 ## Konteksty ograniczone (Bounded Contexts)
 
