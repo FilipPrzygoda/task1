@@ -38,6 +38,16 @@ def list_customers_json():
 def list_loans():
     # Fetch all loans from the database
     loans = Loan.query.all()
+    loans = [
+        {
+            'id': loan.id,
+            'customer_name': loan.customer_name,
+            'book_name': loan.book_name,
+            'loan_date': loan.loan_date,
+            'return_date': loan.return_date,
+        }
+        for loan in loans
+    ]
     # Render the loans.html template with the loans
     print('Loans page accessed')
     return render_template('loans.html', loans=loans, form=CreateLoan())

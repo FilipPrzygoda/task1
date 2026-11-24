@@ -12,6 +12,15 @@ customers = Blueprint('customers', __name__, template_folder='templates', url_pr
 def list_customers():
     # Fetch all customers from the database
     customers = Customer.query.all()
+    customers = [
+        {
+            'id': customer.id,
+            'name': customer.name or '',
+            'city': customer.city or '',
+            'age': customer.age,
+        }
+        for customer in customers
+    ]
     print('Customers page accessed')
     return render_template('customers.html', customers=customers)
 
