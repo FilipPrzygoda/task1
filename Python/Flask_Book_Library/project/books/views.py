@@ -13,6 +13,16 @@ books = Blueprint('books', __name__, template_folder='templates', url_prefix='/b
 def list_books():
     # Fetch all books from the database
     books = Book.query.all()
+    books = [
+        {
+            'id': book.id,
+            'name': book.name or '',
+            'author': book.author or '',
+            'year_published': book.year_published,
+            'book_type': book.book_type,
+        }
+        for book in books
+    ]
     print('Books page accessed')
     return render_template('books.html', books=books)
 
